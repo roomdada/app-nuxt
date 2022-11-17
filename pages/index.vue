@@ -1,5 +1,10 @@
 <script setup lang="ts">
 import AuthLayout from '~/layouts/auth.vue'
+
+onMounted(() => {
+  console.log('mounted')
+})
+
 </script>
 <template>
   <AuthLayout title='Connexion'>

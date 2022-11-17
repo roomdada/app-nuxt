@@ -1,16 +1,14 @@
 <script setup lang="ts">
-import AppLayout from '~/layouts/app.vue'
+import AppLayout from '~/layouts/admin.vue'
 import Navbar from '~/partials/navbar.vue'
-import { defineProps, onMounted } from 'vue'
+import { defineProps } from 'vue'
 
-
-onMounted(() => {
-  console.log(useFetch('https://jsonplaceholder.typicode.com/todos/1'))
-})
-
+const props = defineProps<{
+  title: string
+}>()
 </script>
 <template>
-  <AppLayout title="Tableau de bord | proprietaire">
+  <AppLayout title="Tableau de bord | liste des comptes">
     <template #mobile>
       <Navbar />
     </template>

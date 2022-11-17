@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { defineProps } from 'vue'
-import Navbar from '~/partials/navbar.vue'
+import Navbar from '~/partials/admin-navbar.vue'
 
 const props = defineProps<{
   title: string
