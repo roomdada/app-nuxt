@@ -1,10 +1,14 @@
-<script setup lang="ts">
-import { defineProps } from 'vue'
+<script setup>
 import Navbar from '~/partials/navbar.vue'
+import store from '~/store'
 
-const props = defineProps<{
-  title: string
-}>()
+
+const { title } = defineProps([
+  'title'
+]);
+
+
+const isLoggedIn = ref(false);
 
 useHead({
   script: [{
@@ -12,11 +16,23 @@ useHead({
     "defer": true
   }]
 })
+
+onMounted(() => {
+    store.commit('initial');
+    isLoggedIn.value = store.state.user.isLoggedIn;
+});
+
+
+const logout = () => {
+  store.commit('logout');
+  window.location.href = '/';
+}
+
 </script>
 <template>
 
   <Head>
-    <title>{{ props.title }}</title>
+    <title>{{ title }}</title>
     <html class="h-full" lang="fr" />
 
     <body x-data='{ showProfilDropdown: false, hideNavbar: false }' x-cloak />
@@ -307,7 +323,7 @@ useHead({
                   id="user-menu-item-0">Mon compte</a>
                 <a href="/parametres" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1"
                   id="user-menu-item-1">Parametres</a>
-                <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1"
+                <a  @click="logout" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1"
                   id="user-menu-item-2">Se deconnecter</a>
               </div>
             </div>

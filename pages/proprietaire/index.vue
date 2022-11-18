@@ -1,12 +1,9 @@
 <script setup lang="ts">
 import AppLayout from '~/layouts/app.vue'
 import Navbar from '~/partials/navbar.vue'
-import { defineProps, onMounted } from 'vue'
 
+miidleware: 'auth'
 
-onMounted(() => {
-  console.log(useFetch('https://jsonplaceholder.typicode.com/todos/1'))
-})
 
 </script>
 <template>
