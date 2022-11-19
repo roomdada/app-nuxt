@@ -1,8 +1,8 @@
-<script setup lang="ts">
+<script setup>
 import AuthLayout from '~/layouts/auth.vue'
 </script>
 <template>
-  <AuthLayout title="Mot de passe oublié">
+  <AuthLayout>
     <template #header>
       Mot de passe oublié
     </template>

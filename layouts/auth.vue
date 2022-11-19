@@ -1,14 +1,10 @@
-<script setup lang="ts">
-import { defineProps } from 'vue'
+<script setup>
 
-const props = defineProps<{
-  title: string
-}>()
+
 </script>
 <template>
 
   <Head>
-    <title>{{ props.title }}</title>
     <html class="h-full bg-gradient-to-r from-blue-500 to-indigo-900" lang="fr" />
   </Head>
   <div>
@@ -21,7 +17,7 @@ const props = defineProps<{
         </h2>
       </div>
       <div class="sm:mx-auto sm:w-full sm:max-w-md">
-        <div class="bg-white py-16 px-4 shadow sm:rounded-lg sm:px-10">
+        <div class="bg-white py-12 rounded-lg mx-10 px-4 shadow sm:rounded-lg sm:mx-auto">
           <slot />
         </div>
       </div>

@@ -35,12 +35,13 @@ const submit = async () => {
 
 </script>
 <template>
-  <AuthLayout title='Connexion'>
+  <AuthLayout>
     <template #header>
       Veuillez vous connecter
     </template>
     <form @submit.prevent='submit' class="space-y-6" action="#" method="POST">
       {{ message }}
+      <n-input v-model:value="value" type="text" placeholder="Basic Input" />
       <div>
         <label for="email" class="block text-sm font-medium text-gray-700"> Adresse e-mail </label>
         <div class="mt-1">
@@ -60,7 +61,7 @@ const submit = async () => {
 
       <div>
         <button type="submit"
-          class="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white uppercase bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">Se
+          class="w-full flex justify-center py-2 mt-6 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white uppercase bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">Se
           connecter</button>
       </div>
     </form>
