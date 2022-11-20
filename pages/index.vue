@@ -41,7 +41,6 @@ const submit = async () => {
     </template>
     <form @submit.prevent='submit' class="space-y-6" action="#" method="POST">
       {{ message }}
-      <n-input v-model:value="value" type="text" placeholder="Basic Input" />
       <div>
         <label for="email" class="block text-sm font-medium text-gray-700"> Adresse e-mail </label>
         <div class="mt-1">

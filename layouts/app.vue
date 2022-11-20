@@ -11,15 +11,24 @@ const { title } = defineProps([
 const isLoggedIn = ref(false);
 
 useHead({
+  link:[
+    {
+      "rel" : 'stylesheet',
+      'href' : "https://cdn.jsdelivr.net/npm/daisyui@2.41.0/dist/full.css"
+    }
+  ],
+  
   script: [{
     "src": "//unpkg.com/alpinejs",
     "defer": true
-  }]
+  },
+  ],
+
 })
 
 onMounted(() => {
-    store.commit('initial');
-    isLoggedIn.value = store.state.user.isLoggedIn;
+  store.commit('initial');
+  isLoggedIn.value = store.state.user.isLoggedIn;
 });
 
 
@@ -36,6 +45,7 @@ const logout = () => {
     <html class="h-full" lang="fr" />
 
     <body x-data='{ showProfilDropdown: false, hideNavbar: false }' x-cloak />
+
   </Head>
 
   <div>
@@ -323,7 +333,7 @@ const logout = () => {
                   id="user-menu-item-0">Mon compte</a>
                 <a href="/parametres" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1"
                   id="user-menu-item-1">Parametres</a>
-                <a  @click="logout" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1"
+                <a @click="logout" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1"
                   id="user-menu-item-2">Se deconnecter</a>
               </div>
             </div>
@@ -336,3 +346,6 @@ const logout = () => {
     </div>
   </div>
 </template>
+<style>
+
+</style>

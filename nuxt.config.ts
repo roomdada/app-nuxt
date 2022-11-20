@@ -6,7 +6,7 @@ export default defineNuxtConfig({
     {
       title : "Resi",
       meta: [
-        { name: 'description', content : 'Application de gestion de residence' },
+        {name: 'description', content : 'Application de gestion de residence'},
       ],
     }
   }
