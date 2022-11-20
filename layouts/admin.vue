@@ -1,22 +1,30 @@
-<script setup lang="ts">
+<script setup>
 import { defineProps } from 'vue'
 import Navbar from '~/partials/admin-navbar.vue'
 
-const props = defineProps<{
-  title: string
-}>()
+
+
 
 useHead({
+  link: [
+    {
+      "rel": 'stylesheet',
+      'href': "https://cdn.jsdelivr.net/npm/daisyui@2.41.0/dist/full.css"
+    }
+  ],
+
   script: [{
     "src": "//unpkg.com/alpinejs",
     "defer": true
-  }]
+  },
+  ],
+
 })
+
 </script>
 <template>
 
   <Head>
-    <title>{{ props.title }}</title>
     <html class="h-full" lang="fr" />
 
     <body x-data='{ showProfilDropdown: false, hideNavbar: false }' x-cloak />
@@ -65,7 +73,7 @@ useHead({
           </a>
         </div>
         <nav class="mt-5 flex-1 flex mt-2 flex-col divide-y divide-cyan-800 overflow-y-auto" aria-label="Sidebar">
-            <Navbar />
+          <Navbar />
         </nav>
 
       </div>
@@ -141,8 +149,8 @@ useHead({
                 <!-- Active: "bg-gray-100", Not Active: "" -->
                 <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1"
                   id="user-menu-item-0">Mon compte</a>
-                <a href="/parametres" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1"
-                  id="user-menu-item-1">Parametres</a>
+                <NuxtLink href="/admin/settings" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1"
+                  id="user-menu-item-1">Parametres</NuxtLink>
                 <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1"
                   id="user-menu-item-2">Se deconnecter</a>
               </div>

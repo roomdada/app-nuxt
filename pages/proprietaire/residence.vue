@@ -75,6 +75,13 @@ import { defineProps } from 'vue'
                         <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
                           <div class="flex items-center">
                             <div>
+                              <label for="commod" class='cursor-pointer'>
+                                <svg class="text-orange-900" fill="currentColor"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                                  <path fill="none" d="M0 0h24v24H0z"/><path d="M19 21H5a1 1 0 0 1-1-1v-9H1l10.327-9.388a1 1 0 0 1 1.346 0L23 11h-3v9a1 1 0 0 1-1 1zM6 19h12V9.157l-6-5.454-6 5.454V19zm3-9h6v6H9v-6zm2 2v2h2v-2h-2z"/>
+                                </svg>
+                              </label>
+                            </div>
+                            <div>
                               <label for="gallery" class='cursor-pointer'>
                                 <svg class="text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
                                   viewBox="0 0 24 24" width="24" height="24">
@@ -112,7 +119,7 @@ import { defineProps } from 'vue'
                       </tr>
                       <tr>
                         <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
-                          <div class="badge badge-secondary">occupé</div>
+                          <div class="badge badge-secondary">Indisponible</div>
                         </td>
                         <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
                           Appartement
@@ -130,17 +137,24 @@ import { defineProps } from 'vue'
                         <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
                           <div class="flex items-center">
                             <div>
-                              <a href="#" data-modal-toggle='mediaModal'>
+                              <label for="commod" class='cursor-pointer'>
+                                <svg class="text-orange-900" fill="currentColor"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                                  <path fill="none" d="M0 0h24v24H0z"/><path d="M19 21H5a1 1 0 0 1-1-1v-9H1l10.327-9.388a1 1 0 0 1 1.346 0L23 11h-3v9a1 1 0 0 1-1 1zM6 19h12V9.157l-6-5.454-6 5.454V19zm3-9h6v6H9v-6zm2 2v2h2v-2h-2z"/>
+                                </svg>
+                              </label>
+                            </div>
+                            <div>
+                              <label for="gallery" class='cursor-pointer'>
                                 <svg class="text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
                                   viewBox="0 0 24 24" width="24" height="24">
                                   <path fill="none" d="M0 0h24v24H0z" />
                                   <path
                                     d="M17.409 19c-.776-2.399-2.277-3.885-4.266-5.602A10.954 10.954 0 0 1 20 11V3h1.008c.548 0 .992.445.992.993v16.014a1 1 0 0 1-.992.993H2.992A.993.993 0 0 1 2 20.007V3.993A1 1 0 0 1 2.992 3H6V1h2v4H4v7c5.22 0 9.662 2.462 11.313 7h2.096zM18 1v4h-8V3h6V1h2zm-1.5 9a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z" />
                                 </svg>
-                              </a>
+                              </label>
                             </div>
                             <div>
-                              <a href="#" data-modal-toggle="editHouseModal">
+                              <label for="edit" class='cursor-pointer'>
                                 <svg class="text-indigo-900" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
                                   width="24" height="24" viewBox="0 0 24 24">
                                   <path
@@ -150,22 +164,22 @@ import { defineProps } from 'vue'
                                     d="M5 21h14c1.103 0 2-.897 2-2v-8.668l-2 2V19H8.158c-.026 0-.053.01-.079.01-.033 0-.066-.009-.1-.01H5V5h6.847l2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2z">
                                   </path>
                                 </svg>
-                              </a>
+                              </label>
                             </div>
                             <div>
-                              <a href="#" data-modal-toggle="popup-modal">
+                              <label for="delete" class='cursor-pointer'>
                                 <svg class="text-red-500" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
                                   viewBox="0 0 24 24" width="24" height="24">
                                   <path fill="none" d="M0 0h24v24H0z" />
                                   <path
                                     d="M17 6h5v2h-2v13a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V8H2V6h5V3a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1v3zm1 2H6v12h12V8zM9 4v2h6V4H9z" />
                                 </svg>
-                              </a>
+                              </label>
                             </div>
                           </div>
                         </td>
                       </tr>
-
+                   
 
 
                     </tbody>
@@ -398,6 +412,52 @@ import { defineProps } from 'vue'
         </div>
         <div class="modal-action">
           <label for="gallery" class="btn btn-error text-white">Fermer</label>
+        </div>
+      </div>
+    </div>
+    
+
+    <!-- add commodité-->
+    <input type="checkbox" id="commod" class="modal-toggle" />
+    <div class="modal">
+      <div class="modal-box">
+        <h3 class="font-bold text-xl mb-4">Enregistrer une commodité </h3>
+        <form class="mx-auto">
+          <div class="grid grid-cols-8">
+            <div class="col-span-12 md:col-span-12">
+ 
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text">Prix de location (minimum)</span>
+                </label>
+                <input type="text" placeholder="10000" class="input input-bordered w-full max-w-full" />
+              </div>
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text">Prix de location (maximum)</span>
+                </label>
+                <input type="text" placeholder="10000" class="input input-bordered w-full max-w-full" />
+              </div>
+
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text">Modalité</span>
+                </label>
+                <select type="text" placeholder="Type here" class="input input-bordered w-full max-w-full">
+                  <option value="1">Heure</option>
+                  <option value="2">Jour</option>
+                  <option value="3">Semaine</option>
+                  <option value="4">Weekend</option>
+                  <option value="5">Mois</option>
+                </select>
+              </div>
+           
+            </div>
+          </div>
+        </form>
+        <div class="modal-action">
+          <label for="commod" class="btn btn-error text-white">Annuler</label>
+          <label for="commod" class="btn">Enregistrer</label>
         </div>
       </div>
     </div>

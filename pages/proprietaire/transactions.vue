@@ -17,11 +17,7 @@ const props = defineProps<{
             <h1 class="text-3xl font-bold text-gray-500 mt-3">Liste des transactions</h1>
           </div>
           <div class="actions md:flex self-start space-x-2 mt-3">
-            <button
-              class="block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-              type="button" data-modal-toggle="defaultModal">
-              Nouveau
-            </button>
+            <label for="create" class="btn btn-primary">Nouveau</label>
 
           </div>
         </div>
@@ -43,7 +39,7 @@ const props = defineProps<{
                           class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                           Montant
                         </th>
-               
+
                         <th scope="col"
                           class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                           Statut
@@ -60,7 +56,7 @@ const props = defineProps<{
                     <tbody class="bg-white divide-y divide-gray-200">
                       <tr>
                         <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">R001</td>
-                       
+
                         <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">150000 XOF</td>
                         <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
                           <span
@@ -71,219 +67,20 @@ const props = defineProps<{
                         <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
                           <div class="flex items-center">
                             <div>
-                              <a href="#">
+                              <label for="show" class='cursor-pointer'>
+
                                 <svg class="text-green-500" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
                                   viewBox="0 0 24 24" width="24" height="24">
                                   <path fill="none" d="M0 0h24v24H0z" />
                                   <path
                                     d="M12 3c5.392 0 9.878 3.88 10.819 9-.94 5.12-5.427 9-10.819 9-5.392 0-9.878-3.88-10.819-9C2.121 6.88 6.608 3 12 3zm0 16a9.005 9.005 0 0 0 8.777-7 9.005 9.005 0 0 0-17.554 0A9.005 9.005 0 0 0 12 19zm0-2.5a4.5 4.5 0 1 1 0-9 4.5 4.5 0 0 1 0 9zm0-2a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z" />
                                 </svg>
-                              </a>
+                              </label>
                             </div>
                           </div>
                         </td>
                       </tr>
-                      <tr>
-                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">R001</td>
-                       
-                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">150000 XOF</td>
-                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                          <span
-                            class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-gray-800">
-                            validée
-                          </span>
-                        </td>
-                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                          <div class="flex items-center">
-                            <div>
-                              <a href="#">
-                                <svg class="text-green-500" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
-                                  viewBox="0 0 24 24" width="24" height="24">
-                                  <path fill="none" d="M0 0h24v24H0z" />
-                                  <path
-                                    d="M12 3c5.392 0 9.878 3.88 10.819 9-.94 5.12-5.427 9-10.819 9-5.392 0-9.878-3.88-10.819-9C2.121 6.88 6.608 3 12 3zm0 16a9.005 9.005 0 0 0 8.777-7 9.005 9.005 0 0 0-17.554 0A9.005 9.005 0 0 0 12 19zm0-2.5a4.5 4.5 0 1 1 0-9 4.5 4.5 0 0 1 0 9zm0-2a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z" />
-                                </svg>
-                              </a>
-                            </div>
-                          </div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">R001</td>
-                       
-                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">150000 XOF</td>
-                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                          <span
-                            class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-gray-800">
-                            validée
-                          </span>
-                        </td>
-                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                          <div class="flex items-center">
-                            <div>
-                              <a href="#">
-                                <svg class="text-green-500" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
-                                  viewBox="0 0 24 24" width="24" height="24">
-                                  <path fill="none" d="M0 0h24v24H0z" />
-                                  <path
-                                    d="M12 3c5.392 0 9.878 3.88 10.819 9-.94 5.12-5.427 9-10.819 9-5.392 0-9.878-3.88-10.819-9C2.121 6.88 6.608 3 12 3zm0 16a9.005 9.005 0 0 0 8.777-7 9.005 9.005 0 0 0-17.554 0A9.005 9.005 0 0 0 12 19zm0-2.5a4.5 4.5 0 1 1 0-9 4.5 4.5 0 0 1 0 9zm0-2a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z" />
-                                </svg>
-                              </a>
-                            </div>
-                          </div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">R001</td>
-                       
-                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">150000 XOF</td>
-                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                          <span
-                            class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-gray-800">
-                            validée
-                          </span>
-                        </td>
-                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                          <div class="flex items-center">
-                            <div>
-                              <a href="#">
-                                <svg class="text-green-500" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
-                                  viewBox="0 0 24 24" width="24" height="24">
-                                  <path fill="none" d="M0 0h24v24H0z" />
-                                  <path
-                                    d="M12 3c5.392 0 9.878 3.88 10.819 9-.94 5.12-5.427 9-10.819 9-5.392 0-9.878-3.88-10.819-9C2.121 6.88 6.608 3 12 3zm0 16a9.005 9.005 0 0 0 8.777-7 9.005 9.005 0 0 0-17.554 0A9.005 9.005 0 0 0 12 19zm0-2.5a4.5 4.5 0 1 1 0-9 4.5 4.5 0 0 1 0 9zm0-2a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z" />
-                                </svg>
-                              </a>
-                            </div>
-                          </div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">R001</td>
-                       
-                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">150000 XOF</td>
-                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                          <span
-                            class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-gray-800">
-                            validée
-                          </span>
-                        </td>
-                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                          <div class="flex items-center">
-                            <div>
-                              <a href="#">
-                                <svg class="text-green-500" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
-                                  viewBox="0 0 24 24" width="24" height="24">
-                                  <path fill="none" d="M0 0h24v24H0z" />
-                                  <path
-                                    d="M12 3c5.392 0 9.878 3.88 10.819 9-.94 5.12-5.427 9-10.819 9-5.392 0-9.878-3.88-10.819-9C2.121 6.88 6.608 3 12 3zm0 16a9.005 9.005 0 0 0 8.777-7 9.005 9.005 0 0 0-17.554 0A9.005 9.005 0 0 0 12 19zm0-2.5a4.5 4.5 0 1 1 0-9 4.5 4.5 0 0 1 0 9zm0-2a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z" />
-                                </svg>
-                              </a>
-                            </div>
-                          </div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">R001</td>
-                       
-                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">150000 XOF</td>
-                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                          <span
-                            class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-gray-800">
-                            validée
-                          </span>
-                        </td>
-                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                          <div class="flex items-center">
-                            <div>
-                              <a href="#">
-                                <svg class="text-green-500" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
-                                  viewBox="0 0 24 24" width="24" height="24">
-                                  <path fill="none" d="M0 0h24v24H0z" />
-                                  <path
-                                    d="M12 3c5.392 0 9.878 3.88 10.819 9-.94 5.12-5.427 9-10.819 9-5.392 0-9.878-3.88-10.819-9C2.121 6.88 6.608 3 12 3zm0 16a9.005 9.005 0 0 0 8.777-7 9.005 9.005 0 0 0-17.554 0A9.005 9.005 0 0 0 12 19zm0-2.5a4.5 4.5 0 1 1 0-9 4.5 4.5 0 0 1 0 9zm0-2a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z" />
-                                </svg>
-                              </a>
-                            </div>
-                          </div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">R001</td>
-                       
-                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">150000 XOF</td>
-                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                          <span
-                            class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-gray-800">
-                            validée
-                          </span>
-                        </td>
-                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                          <div class="flex items-center">
-                            <div>
-                              <a href="#">
-                                <svg class="text-green-500" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
-                                  viewBox="0 0 24 24" width="24" height="24">
-                                  <path fill="none" d="M0 0h24v24H0z" />
-                                  <path
-                                    d="M12 3c5.392 0 9.878 3.88 10.819 9-.94 5.12-5.427 9-10.819 9-5.392 0-9.878-3.88-10.819-9C2.121 6.88 6.608 3 12 3zm0 16a9.005 9.005 0 0 0 8.777-7 9.005 9.005 0 0 0-17.554 0A9.005 9.005 0 0 0 12 19zm0-2.5a4.5 4.5 0 1 1 0-9 4.5 4.5 0 0 1 0 9zm0-2a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z" />
-                                </svg>
-                              </a>
-                            </div>
-                          </div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">R001</td>
-                       
-                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">150000 XOF</td>
-                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                          <span
-                            class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-gray-800">
-                            validée
-                          </span>
-                        </td>
-                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                          <div class="flex items-center">
-                            <div>
-                              <a href="#">
-                                <svg class="text-green-500" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
-                                  viewBox="0 0 24 24" width="24" height="24">
-                                  <path fill="none" d="M0 0h24v24H0z" />
-                                  <path
-                                    d="M12 3c5.392 0 9.878 3.88 10.819 9-.94 5.12-5.427 9-10.819 9-5.392 0-9.878-3.88-10.819-9C2.121 6.88 6.608 3 12 3zm0 16a9.005 9.005 0 0 0 8.777-7 9.005 9.005 0 0 0-17.554 0A9.005 9.005 0 0 0 12 19zm0-2.5a4.5 4.5 0 1 1 0-9 4.5 4.5 0 0 1 0 9zm0-2a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z" />
-                                </svg>
-                              </a>
-                            </div>
-                          </div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">R001</td>
-                       
-                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">150000 XOF</td>
-                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                          <span
-                            class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-gray-800">
-                            validée
-                          </span>
-                        </td>
-                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                          <div class="flex items-center">
-                            <div>
-                              <a href="#">
-                                <svg class="text-green-500" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
-                                  viewBox="0 0 24 24" width="24" height="24">
-                                  <path fill="none" d="M0 0h24v24H0z" />
-                                  <path
-                                    d="M12 3c5.392 0 9.878 3.88 10.819 9-.94 5.12-5.427 9-10.819 9-5.392 0-9.878-3.88-10.819-9C2.121 6.88 6.608 3 12 3zm0 16a9.005 9.005 0 0 0 8.777-7 9.005 9.005 0 0 0-17.554 0A9.005 9.005 0 0 0 12 19zm0-2.5a4.5 4.5 0 1 1 0-9 4.5 4.5 0 0 1 0 9zm0-2a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z" />
-                                </svg>
-                              </a>
-                            </div>
-                          </div>
-                        </td>
-                      </tr>
-                
+
                     </tbody>
                   </table>
                 </div>
@@ -291,6 +88,86 @@ const props = defineProps<{
               </div>
             </div>
           </div>
+        </div>
+      </div>
+    </div>
+
+
+    <input type="checkbox" id="show" class="modal-toggle" />
+    <div class="modal">
+      <div class="modal-box">
+        <h3 class="font-bold text-xl mb-4">Details sur la transaction</h3>
+        <div class="md:grid md:grid-cols-3 md:gap-6">
+          <div class="mt-5 md:mt-0 md:col-span-3">
+            <div class="overflow-hidden sm:rounded-md">
+              <div class="px-4 py-5 bg-white">
+                <div class="grid grid-cols-8 gap-2 md:gap-6">
+                  <div class="col-span-8">
+                    <div class="flex flex-col md:flex-row space-y-2 md:space-y-0">
+                      <div class="w-full md:w-1/2">
+                        <dt class="text-sm font-medium text-gray-500">Date de création</dt>
+                        <dd class="text-sm font-normal text-gray-900">11/03/2020</dd>
+                      </div>
+                      <div class="w-full md:w-1/2">
+                        <dt class="text-sm font-medium text-gray-500">Montant</dt>
+                        <dd class="text-sm font-normal text-gray-900">12555000 XOF</dd>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-span-8">
+                    <div class="flex flex-col md:flex-row space-y-2 md:space-y-0">
+                      <div class="w-full md:w-1/2">
+                        <dt class="text-sm font-medium text-gray-500">Moyen de paiement</dt>
+                        <dd class="text-sm font-normal text-gray-900">Moov Money</dd>
+                      </div>
+                      <div class="w-full md:w-1/2">
+                        <dt class="text-sm font-medium text-gray-500">Montant</dt>
+                        <dd class="text-sm font-normal text-gray-900">100 000 XOF</dd>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-action">
+          <label for="show" class="btn btn-error text-white">Fermer</label>
+        </div>
+      </div>
+    </div>
+
+    <!--Creation d'une transaction-->
+    <input type="checkbox" id="create" class="modal-toggle" />
+    <div class="modal">
+      <div class="modal-box">
+        <h3 class="font-bold text-xl mb-4">créer une nouvelle residence</h3>
+        <form class="mx-auto">
+          <div class="grid grid-cols-8">
+            <div class="col-span-12 md:col-span-12">
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text">Montant</span>
+                </label>
+                <input type="text" placeholder="" class="input input-bordered w-full max-w-full" />
+              </div>
+
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text">Moyen de paiement</span>
+                </label>
+                <select type="text" placeholder="Type here" class="input input-bordered w-full max-w-full">
+                  <option value="1">Moov money</option>
+                  <option value="2">Wave</option>
+                  <option value="3">Orange Money</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </form>
+        <div class="modal-action">
+          <label for="create" class="btn btn-error text-white">Annuler</label>
+          <label for="create" class="btn">Enregistrer</label>
         </div>
       </div>
     </div>
