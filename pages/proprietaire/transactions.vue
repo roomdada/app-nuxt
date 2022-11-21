@@ -33,7 +33,7 @@ const props = defineProps<{
                       <tr>
                         <th scope="col"
                           class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                          Identifiant
+                            
                         </th>
                         <th scope="col"
                           class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
@@ -121,8 +121,8 @@ const props = defineProps<{
                                         <dd class="text-sm font-normal text-gray-900">Moov Money</dd>
                                     </div>
                                     <div class="w-full md:w-1/2">
-                                        <dt class="text-sm font-medium text-gray-500">Montant</dt>
-                                        <dd class="text-sm font-normal text-gray-900">100 000 XOF</dd>
+                                        <dt class="text-sm font-medium text-gray-500">Statut</dt>
+                                        <dd class="text-sm font-normal text-gray-900"><div class='badge badge-secondary'>En attente</div></dd>
                                     </div>
                                 </div>
                             </div>
