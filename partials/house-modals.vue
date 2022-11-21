@@ -159,7 +159,6 @@
     </div>
   </div>
 
-  <!--gallerie d'une residence-->
   <input type="checkbox" id="gallery" class="modal-toggle" />
   <div class="modal">
     <div class="modal-box">
