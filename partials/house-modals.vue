@@ -163,7 +163,25 @@
   <input type="checkbox" id="gallery" class="modal-toggle" />
   <div class="modal">
     <div class="modal-box">
-      <h3 class="font-bold text-xl mb-4">Liste des images de la residence</h3>
+      <h3 class="font-bold text-xl mb-4">Ajouter une nouvelle image </h3>
+      <form class="mx-auto mb-4">
+        <div class="grid grid-cols-8">
+          <div class="col-span-12 md:col-span-12">
+            <div class="form-control">
+              <label class="label">
+                <span class="label-text">Image</span>
+              </label>
+              <input type="file" placeholder="10000" class="input input-bordered w-full max-w-full" />
+            </div>
+          </div>
+          
+        </div>
+        <div class="modal-action">
+        <label for="gallery" class="btn text-white">Enregistrer</label>
+      </div>
+      </form>
+      <hr class='h-4 w-full'/>
+      <h3 class="font-bold text-xl mt-4">Liste des images de la residence</h3>
 
       <div class='grid grid-cols-1 space-y-2 mx-auto'>
 
@@ -269,70 +287,70 @@
   </div>
 
   <input type="checkbox" id="show" class="modal-toggle" />
-    <div class="modal">
-      <div class="modal-box">
-        <h3 class="font-bold text-xl mb-4">Details sur la residence</h3>
-        <div class="md:grid md:grid-cols-3 md:gap-6">
-            <div class="mt-5 md:mt-0 md:col-span-3">
-                <div class="overflow-hidden sm:rounded-md">
-                    <div class="px-4 py-5 bg-white">
-                        <div class="grid grid-cols-8 gap-2 md:gap-6">
-                            <div class="col-span-8">
-                                <div class="flex flex-col md:flex-row space-y-2 md:space-y-0">
-                                    <div class="w-full md:w-1/2">
-                                        <dt class="text-sm font-medium text-gray-500">Date de création</dt>
-                                        <dd class="text-sm font-normal text-gray-900">11/03/2024</dd>
-                                    </div>
-                                    <div class="w-full md:w-1/2">
-                                        <dt class="text-sm font-medium text-gray-500">Commune</dt>
-                                        <dd class="text-sm font-normal text-gray-900">Koumassi Agouti</dd>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-span-8">
-                                <div class="flex flex-col md:flex-row space-y-2 md:space-y-0">
-                                  <div class="w-full md:w-1/2">
-                                        <dt class="text-sm font-medium text-gray-500">Montant minimum de location</dt>
-                                        <dd class="text-sm font-normal text-gray-900">50000 XOF</dd>
-                                    </div>
-                                    <div class="w-full md:w-1/2">
-                                        <dt class="text-sm font-medium text-gray-500">Montant maximum de location</dt>
-                                        <dd class="text-sm font-normal text-gray-900">1000000 XOF</dd>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-span-8">
-                                <div class="flex flex-col md:flex-row space-y-2 md:space-y-0">
-                                  <div class="w-full md:w-1/2">
-                                        <dt class="text-sm font-medium text-gray-500">Modalité</dt>
-                                        <dd class="text-sm font-normal text-gray-900">Jour</dd>
-                                    </div>
-                                    <div class="w-full md:w-1/2">
-                                        <dt class="text-sm font-medium text-gray-500">Type</dt>
-                                        <dd class="text-sm font-normal text-gray-900">Villa</dd>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-span-8">
-                                <div class="flex flex-col md:flex-row space-y-2 md:space-y-0">
-                                    <div class="w-full md:w-1/2">
-                                        <dt class="text-sm font-medium text-gray-500">Nom complet proprietaire</dt>
-                                        <dd class="text-sm font-normal text-gray-900">Chantal Leroux</dd>
-                                    </div>
-                                    <div class="w-full md:w-1/2">
-                                        <dt class="text-sm font-medium text-gray-500">Contact proprietaire</dt>
-                                        <dd class="text-sm font-normal text-gray-900">0158784411</dd>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+  <div class="modal">
+    <div class="modal-box">
+      <h3 class="font-bold text-xl mb-4">Details sur la residence</h3>
+      <div class="md:grid md:grid-cols-3 md:gap-6">
+        <div class="mt-5 md:mt-0 md:col-span-3">
+          <div class="overflow-hidden sm:rounded-md">
+            <div class="px-4 py-5 bg-white">
+              <div class="grid grid-cols-8 gap-2 md:gap-6">
+                <div class="col-span-8">
+                  <div class="flex flex-col md:flex-row space-y-2 md:space-y-0">
+                    <div class="w-full md:w-1/2">
+                      <dt class="text-sm font-medium text-gray-500">Date de création</dt>
+                      <dd class="text-sm font-normal text-gray-900">11/03/2024</dd>
                     </div>
+                    <div class="w-full md:w-1/2">
+                      <dt class="text-sm font-medium text-gray-500">Commune</dt>
+                      <dd class="text-sm font-normal text-gray-900">Koumassi Agouti</dd>
+                    </div>
+                  </div>
                 </div>
+                <div class="col-span-8">
+                  <div class="flex flex-col md:flex-row space-y-2 md:space-y-0">
+                    <div class="w-full md:w-1/2">
+                      <dt class="text-sm font-medium text-gray-500">Montant minimum de location</dt>
+                      <dd class="text-sm font-normal text-gray-900">50000 XOF</dd>
+                    </div>
+                    <div class="w-full md:w-1/2">
+                      <dt class="text-sm font-medium text-gray-500">Montant maximum de location</dt>
+                      <dd class="text-sm font-normal text-gray-900">1000000 XOF</dd>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-span-8">
+                  <div class="flex flex-col md:flex-row space-y-2 md:space-y-0">
+                    <div class="w-full md:w-1/2">
+                      <dt class="text-sm font-medium text-gray-500">Modalité</dt>
+                      <dd class="text-sm font-normal text-gray-900">Jour</dd>
+                    </div>
+                    <div class="w-full md:w-1/2">
+                      <dt class="text-sm font-medium text-gray-500">Type</dt>
+                      <dd class="text-sm font-normal text-gray-900">Villa</dd>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-span-8">
+                  <div class="flex flex-col md:flex-row space-y-2 md:space-y-0">
+                    <div class="w-full md:w-1/2">
+                      <dt class="text-sm font-medium text-gray-500">Nom complet proprietaire</dt>
+                      <dd class="text-sm font-normal text-gray-900">Chantal Leroux</dd>
+                    </div>
+                    <div class="w-full md:w-1/2">
+                      <dt class="text-sm font-medium text-gray-500">Contact proprietaire</dt>
+                      <dd class="text-sm font-normal text-gray-900">0158784411</dd>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-        </div>
-        <div class="modal-action">
-          <label for="show" class="btn btn-error text-white">Fermer</label>
+          </div>
         </div>
       </div>
+      <div class="modal-action">
+        <label for="show" class="btn btn-error text-white">Fermer</label>
+      </div>
     </div>
+  </div>
 </template>
