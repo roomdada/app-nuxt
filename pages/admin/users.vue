@@ -1,13 +1,9 @@
-<script setup lang="ts">
+<script setup>
 import AppLayout from '~/layouts/admin.vue'
-import { defineProps } from 'vue'
 
-const props = defineProps<{
-  title: string
-}>()
 </script>
 <template>
-  <AppLayout title="Tableau de bord | Mes residennces">
+  <AppLayout>
 
     <div class="mt-8">
 

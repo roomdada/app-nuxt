@@ -39,7 +39,7 @@ const props = defineProps<{
                           class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                           Montant
                         </th>
-
+               
                         <th scope="col"
                           class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                           Statut
@@ -56,7 +56,7 @@ const props = defineProps<{
                     <tbody class="bg-white divide-y divide-gray-200">
                       <tr>
                         <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">R001</td>
-
+                       
                         <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">150000 XOF</td>
                         <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
                           <span
@@ -80,7 +80,7 @@ const props = defineProps<{
                           </div>
                         </td>
                       </tr>
-
+                
                     </tbody>
                   </table>
                 </div>
@@ -98,38 +98,38 @@ const props = defineProps<{
       <div class="modal-box">
         <h3 class="font-bold text-xl mb-4">Details sur la transaction</h3>
         <div class="md:grid md:grid-cols-3 md:gap-6">
-          <div class="mt-5 md:mt-0 md:col-span-3">
-            <div class="overflow-hidden sm:rounded-md">
-              <div class="px-4 py-5 bg-white">
-                <div class="grid grid-cols-8 gap-2 md:gap-6">
-                  <div class="col-span-8">
-                    <div class="flex flex-col md:flex-row space-y-2 md:space-y-0">
-                      <div class="w-full md:w-1/2">
-                        <dt class="text-sm font-medium text-gray-500">Date de création</dt>
-                        <dd class="text-sm font-normal text-gray-900">11/03/2020</dd>
-                      </div>
-                      <div class="w-full md:w-1/2">
-                        <dt class="text-sm font-medium text-gray-500">Montant</dt>
-                        <dd class="text-sm font-normal text-gray-900">12555000 XOF</dd>
-                      </div>
+            <div class="mt-5 md:mt-0 md:col-span-3">
+                <div class="overflow-hidden sm:rounded-md">
+                    <div class="px-4 py-5 bg-white">
+                        <div class="grid grid-cols-8 gap-2 md:gap-6">
+                            <div class="col-span-8">
+                                <div class="flex flex-col md:flex-row space-y-2 md:space-y-0">
+                                    <div class="w-full md:w-1/2">
+                                        <dt class="text-sm font-medium text-gray-500">Date de création</dt>
+                                        <dd class="text-sm font-normal text-gray-900">11/03/2020</dd>
+                                    </div>
+                                    <div class="w-full md:w-1/2">
+                                        <dt class="text-sm font-medium text-gray-500">Montant</dt>
+                                        <dd class="text-sm font-normal text-gray-900">12555000 XOF</dd>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-span-8">
+                                <div class="flex flex-col md:flex-row space-y-2 md:space-y-0">
+                                    <div class="w-full md:w-1/2">
+                                        <dt class="text-sm font-medium text-gray-500">Moyen de paiement</dt>
+                                        <dd class="text-sm font-normal text-gray-900">Moov Money</dd>
+                                    </div>
+                                    <div class="w-full md:w-1/2">
+                                        <dt class="text-sm font-medium text-gray-500">Montant</dt>
+                                        <dd class="text-sm font-normal text-gray-900">100 000 XOF</dd>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                  </div>
-                  <div class="col-span-8">
-                    <div class="flex flex-col md:flex-row space-y-2 md:space-y-0">
-                      <div class="w-full md:w-1/2">
-                        <dt class="text-sm font-medium text-gray-500">Moyen de paiement</dt>
-                        <dd class="text-sm font-normal text-gray-900">Moov Money</dd>
-                      </div>
-                      <div class="w-full md:w-1/2">
-                        <dt class="text-sm font-medium text-gray-500">Montant</dt>
-                        <dd class="text-sm font-normal text-gray-900">100 000 XOF</dd>
-                      </div>
-                    </div>
-                  </div>
                 </div>
-              </div>
             </div>
-          </div>
         </div>
         <div class="modal-action">
           <label for="show" class="btn btn-error text-white">Fermer</label>
@@ -137,39 +137,29 @@ const props = defineProps<{
       </div>
     </div>
 
-    <!--Creation d'une transaction-->
-    <input type="checkbox" id="create" class="modal-toggle" />
+    <input type="checkbox" id="allow" class="modal-toggle" />
     <div class="modal">
       <div class="modal-box">
-        <h3 class="font-bold text-xl mb-4">créer une nouvelle residence</h3>
-        <form class="mx-auto">
-          <div class="grid grid-cols-8">
-            <div class="col-span-12 md:col-span-12">
-              <div class="form-control">
-                <label class="label">
-                  <span class="label-text">Montant</span>
-                </label>
-                <input type="text" placeholder="" class="input input-bordered w-full max-w-full" />
-              </div>
-
-              <div class="form-control">
-                <label class="label">
-                  <span class="label-text">Moyen de paiement</span>
-                </label>
-                <select type="text" placeholder="Type here" class="input input-bordered w-full max-w-full">
-                  <option value="1">Moov money</option>
-                  <option value="2">Wave</option>
-                  <option value="3">Orange Money</option>
-                </select>
-              </div>
+        <h3 class="font-bold text-xl mb-4"></h3>
+        <div class="sm:flex sm:items-start">
+          <div
+            class="mx-auto flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-green-500 sm:mx-0 sm:h-10 sm:w-10">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M10 15.172l9.192-9.193 1.415 1.414L10 18l-6.364-6.364 1.414-1.414z"/></svg>
+          </div>
+          <div class="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left">
+            <h3 class="text-lg font-medium leading-6 text-gray-900" id="modal-title">Accepter la transaction</h3>
+            <div class="mt-2">
+              <p class="text-sm text-gray-500">Etes-vous sur de vouloir accepter cette transaction ?</p>
             </div>
           </div>
-        </form>
+        </div>
         <div class="modal-action">
-          <label for="create" class="btn btn-error text-white">Annuler</label>
-          <label for="create" class="btn">Enregistrer</label>
+          <label for="allow" class="btn btn-error text-white">Refuser</label>
+          <label for="allow" class="btn">Accepter</label>
         </div>
       </div>
     </div>
+
+    
   </AppLayout>
 </template>

@@ -92,7 +92,7 @@
 
   <div class="mt-6 pt-6">
     <div class="px-2 space-y-1">
-      <NuxtLink to="/admin/accounts"
+      <NuxtLink to="/admin/wallet"
         class="group flex items-center px-2 py-2 text-sm leading-6 font-medium rounded-md text-cyan-100 hover:text-white hover:bg-cyan-600">
         <!-- Heroicon name: outline/cog -->
         <svg class="mr-4 flex-shrink-0 h-6 w-6 text-cyan-200" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
@@ -114,6 +114,12 @@
           </path>
         </svg>
         Transactions
+      </NuxtLink>
+      <NuxtLink to="/admin/settings"
+        class="group flex items-center px-2 py-2 text-sm leading-6 font-medium rounded-md text-cyan-100 hover:text-white hover:bg-cyan-600">
+        <!-- Heroicon name: outline/question-mark-circle -->
+        <svg class="mr-4 flex-shrink-0 h-6 w-6 text-cyan-200" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M2 18h7v2H2v-2zm0-7h9v2H2v-2zm0-7h20v2H2V4zm18.674 9.025l1.156-.391 1 1.732-.916.805a4.017 4.017 0 0 1 0 1.658l.916.805-1 1.732-1.156-.391c-.41.37-.898.655-1.435.83L19 21h-2l-.24-1.196a3.996 3.996 0 0 1-1.434-.83l-1.156.392-1-1.732.916-.805a4.017 4.017 0 0 1 0-1.658l-.916-.805 1-1.732 1.156.391c.41-.37.898-.655 1.435-.83L17 11h2l.24 1.196c.536.174 1.024.46 1.434.83zM18 18a2 2 0 1 0 0-4 2 2 0 0 0 0 4z" fill="rgba(255,255,255,1)"/></svg>
+        Parametres
       </NuxtLink>
     </div>
   </div>

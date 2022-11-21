@@ -1,14 +1,11 @@
 <script setup lang="ts">
 import AppLayout from '~/layouts/admin.vue'
 import Navbar from '~/partials/navbar.vue'
-import { defineProps } from 'vue'
 
-const props = defineProps<{
-  title: string
-}>()
+
 </script>
 <template>
-  <AppLayout title="Tableau de bord | proprietaire">
+  <AppLayout>
     <template #mobile>
       <Navbar />
     </template>

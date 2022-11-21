@@ -1,13 +1,9 @@
-<script setup lang="ts">
+<script setup>
 import AppLayout from '~/layouts/admin.vue'
-import { defineProps } from 'vue'
 
-const props = defineProps<{
-  title: string
-}>()
 </script>
 <template>
-  <AppLayout title="Tableau de bord | Mes residennces">
+  <AppLayout>
 
     <div class="mt-8">
 
@@ -17,12 +13,7 @@ const props = defineProps<{
             <h1 class="text-3xl font-bold text-gray-500 mt-3">Liste des roles</h1>
           </div>
           <div class="actions md:flex self-start space-x-2 mt-3">
-            <button
-              class="block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-              type="button" data-modal-toggle="defaultModal">
-              Nouveau
-            </button>
-
+            <label for="create" class="btn btn-primary">Nouveau</label>
           </div>
         </div>
         <hr class="mb-5 border border-grey-900">
@@ -63,7 +54,7 @@ const props = defineProps<{
                         <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
                           <div class="flex items-center">
                             <div>
-                              <a href="#" data-modal-toggle="editHouseModal">
+                              <label for="edit" class='cursor-pointer'>
                                 <svg class="text-indigo-900" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
                                   width="24" height="24" viewBox="0 0 24 24">
                                   <path
@@ -73,17 +64,17 @@ const props = defineProps<{
                                     d="M5 21h14c1.103 0 2-.897 2-2v-8.668l-2 2V19H8.158c-.026 0-.053.01-.079.01-.033 0-.066-.009-.1-.01H5V5h6.847l2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2z">
                                   </path>
                                 </svg>
-                              </a>
+                              </label>
                             </div>
                             <div>
-                              <a href="#" data-modal-toggle="popup-modal">
+                              <label for="delete" class='cursor-pointer'>
                                 <svg class="text-red-500" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
                                   viewBox="0 0 24 24" width="24" height="24">
                                   <path fill="none" d="M0 0h24v24H0z" />
                                   <path
                                     d="M17 6h5v2h-2v13a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V8H2V6h5V3a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1v3zm1 2H6v12h12V8zM9 4v2h6V4H9z" />
                                 </svg>
-                              </a>
+                              </label>
                             </div>
                           </div>
                         </td>
@@ -100,5 +91,81 @@ const props = defineProps<{
         </div>
       </div>
     </div>
+
+    <input type="checkbox" id="create" class="modal-toggle" />
+    <div class="modal">
+      <div class="modal-box">
+        <h3 class="font-bold text-xl mb-4">Ajouter un nouveau role</h3>
+        <form class="mx-auto">
+          <div class="grid grid-cols-8">
+            <div class="col-span-12 md:col-span-12">
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text">Role</span>
+                </label>
+                <input type="text" placeholder="" class="input input-bordered w-full max-w-full" />
+              </div>
+            </div>
+          </div>
+        </form>
+        <div class="modal-action">
+          <label for="create" class="btn btn-error text-white">Annuler</label>
+          <label for="create" class="btn">Enregistrer</label>
+        </div>
+      </div>
+    </div>
+
+    <input type="checkbox" id="delete" class="modal-toggle" />
+    <div class="modal">
+      <div class="modal-box">
+        <h3 class="font-bold text-xl mb-4"></h3>
+        <div class="sm:flex sm:items-start">
+          <div
+            class="mx-auto flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-red-100 sm:mx-0 sm:h-10 sm:w-10">
+            <!-- Heroicon name: outline/exclamation-triangle -->
+            <svg class="h-6 w-6 text-red-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+              stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M12 10.5v3.75m-9.303 3.376C1.83 19.126 2.914 21 4.645 21h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 4.88c-.866-1.501-3.032-1.501-3.898 0L2.697 17.626zM12 17.25h.007v.008H12v-.008z" />
+            </svg>
+          </div>
+          <div class="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left">
+            <h3 class="text-lg font-medium leading-6 text-gray-900" id="modal-title">Suppression du role</h3>
+            <div class="mt-2">
+              <p class="text-sm text-gray-500">Etes-vous sur de vouloir supprimer cet role ?</p>
+            </div>
+          </div>
+        </div>
+        <div class="modal-action">
+          <label for="delete" class="btn btn-error text-white">Annuler</label>
+          <label for="delete" class="btn">Confirmer</label>
+        </div>
+      </div>
+    </div>
+
+    <input type="checkbox" id="edit" class="modal-toggle" />
+    <div class="modal">
+      <div class="modal-box">
+        <h3 class="font-bold text-xl mb-4">Editer le role</h3>
+        <form class="mx-auto">
+          <div class="grid grid-cols-8">
+            <div class="col-span-12 md:col-span-12">
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text">Role</span>
+                </label>
+                <input type="text" placeholder="Adminstrateur" class="input input-bordered w-full max-w-full" />
+              </div>
+            </div>
+          </div>
+        </form>
+        <div class="modal-action">
+          <label for="edit" class="btn btn-error text-white">Annuler</label>
+          <label for="edit" class="btn">Enregistrer</label>
+        </div>
+      </div>
+    </div>
+
+
   </AppLayout>
 </template>
