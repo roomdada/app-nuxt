@@ -1,6 +1,6 @@
 <script setup>
 import AppLayout from '~/layouts/app.vue'
-import Modal from '~/partials/house-modal.vue'
+import Modal from '~/partials/house-modals.vue'
 </script>
 <template>
   <AppLayout>
