@@ -1,0 +1,49 @@
+<script>
+
+</script>
+<template>
+  <table class="min-w-full divide-y divide-gray-200">
+    <thead class="bg-blue-500 rounded-t-lg">
+      <tr>
+        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-white uppercase tracking-wider">Criteres
+        </th>
+        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-white uppercase tracking-wider">
+          Actions
+        </th>
+      </tr>
+    </thead>
+    <tbody class="bg-white divide-y divide-gray-200">
+      <tr>
+        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Piscine</td>
+        </td>
+        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+          <div class="flex items-center space-x-2">
+            <div>
+              <a href="#" data-modal-toggle="editHouseModal">
+                <svg class="text-indigo-900" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="24"
+                  height="24" viewBox="0 0 24 24">
+                  <path
+                    d="m7 17.013 4.413-.015 9.632-9.54c.378-.378.586-.88.586-1.414s-.208-1.036-.586-1.414l-1.586-1.586c-.756-.756-2.075-.752-2.825-.003L7 12.583v4.43zM18.045 4.458l1.589 1.583-1.597 1.582-1.586-1.585 1.594-1.58zM9 13.417l6.03-5.973 1.586 1.586-6.029 5.971L9 15.006v-1.589z">
+                  </path>
+                  <path
+                    d="M5 21h14c1.103 0 2-.897 2-2v-8.668l-2 2V19H8.158c-.026 0-.053.01-.079.01-.033 0-.066-.009-.1-.01H5V5h6.847l2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2z">
+                  </path>
+                </svg>
+              </a>
+            </div>
+            <div>
+              <a href="#" data-modal-toggle="popup-modal">
+                <svg class="text-red-500" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                  width="24" height="24">
+                  <path fill="none" d="M0 0h24v24H0z" />
+                  <path
+                    d="M17 6h5v2h-2v13a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V8H2V6h5V3a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1v3zm1 2H6v12h12V8zM9 4v2h6V4H9z" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</template>
